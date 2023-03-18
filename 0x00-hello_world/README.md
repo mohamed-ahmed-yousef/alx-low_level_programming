@@ -1,0 +1,2 @@
+- This is the first dealing with c lang with alx course
+- I hope this content add alot for me
