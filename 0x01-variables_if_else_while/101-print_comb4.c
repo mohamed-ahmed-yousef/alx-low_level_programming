@@ -15,14 +15,18 @@ int main(void)
 	{
 		for (j = 48; j < 58; j++)
 		{
-			if (i == j || j <= i)
-			continue;
-			putchar(i);
-			putchar(j);
-			if (i == 56 && j == 57)
-			continue;
-			putchar(add);
-			putchar(' ');
+			for (k = 0; k < 58; k++)
+			{
+				if (i == j || j <= i || i == k || j == k || k <= j)
+				continue;
+				putchar(i);
+				putchar(j);
+				putchar(k);
+				if (i == 55 && j == 56 && k == 57)
+				continue;
+				putchar(add);
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
