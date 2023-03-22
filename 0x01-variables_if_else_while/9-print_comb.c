@@ -12,9 +12,8 @@ int main(void)
 	for (i = 48; i < 58; i++)
 	{
 		putchar(i);
-		if (i == 57)
-			add = 36;
-		putchar(add);
+		if (i != 57)
+			putchar(add);
 		putchar(' ');
 	}
 	putchar('\n');
