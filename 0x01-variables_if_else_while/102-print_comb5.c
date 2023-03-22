@@ -16,12 +16,11 @@ int main(void)
 	{
 		for (j = 48; j < 58; j++)
 		{
-			for (k = 48; k < 58; k++)
+			for (k = i; k < 58; k++)
 			{
-				for (m = 48; m < 58; m++)
+				for (m = j; m < 58; m++)
 				{
-					if (j >= m )
-					continue;
+					if (j==m && i==k) continue;
 					putchar(i);
 					putchar(j);
 					putchar(' ');
