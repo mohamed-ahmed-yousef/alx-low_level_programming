@@ -1,11 +1,18 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - Entry point
+ * main - Dealing with heading file in c
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	printf("_putchar\n");
+	char chr[]="_putchar";
+	int i=0;
+
+	for (int i=0; i < 8; i++)
+	{
+		_putchar(chr[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
