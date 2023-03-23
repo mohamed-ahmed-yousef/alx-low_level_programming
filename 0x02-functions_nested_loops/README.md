@@ -1,0 +1,1 @@
+- This is a lesson to deal with function & nested loops in c lang
