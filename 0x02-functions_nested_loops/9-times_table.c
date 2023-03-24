@@ -21,6 +21,8 @@ void times_table(void)
 					_putchar(' ');
 				}
 				_putchar(a + 48);
+				if (j != 9)
+				_putchar(',');
 			}
 			if (a > 9)
 			{
@@ -29,6 +31,8 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(a + 48);
 				_putchar(l + 48);
+				if (j != 9)
+				_putchar(',');
 
 			}
 		}
