@@ -2,9 +2,7 @@
 /**
 * jack_bauer - print last digit of the number.
 *
-*@c: is an integer value passed from main function.
-* Return: Always 0
-*
+* This print from 00:00 to 23:59
 */
 void jack_bauer(void)
 {
