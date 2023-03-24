@@ -1,19 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* positive_or_negative - tests function that prints if integer is positive
-*
-* This function check the number sign.
-*@i: number needed to check
+* main - tests function that prints if integer is positive or negative
+* Return: 0
 */
 
-void positive_or_negative(int i)
+int main(void)
 {
-	if (i > 0)
-	printf("%d is positive", i);
-	else if (i < 0)
-	printf("%d is negative", i);
-	else
-	printf("%d is zero", i);
-	printf("\n");
-}
+	int i;
+
+	i = 98;
+	positive_or_negative(i);
+	return (0); }
