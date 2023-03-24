@@ -15,8 +15,7 @@ void print_to_98(int n)
 		{
 			if (n != x)
 			{
-				_putchar(',');
-				_putchar(' ');
+				printf(", ");
 			}
 			printf("%d", n);
 			n++;
@@ -27,12 +26,11 @@ void print_to_98(int n)
 		{
 			if (n != x)
 			{
-				_putchar(',');
-				_putchar(' ');
+				printf(", ");
 			}
 			printf("%d", n);
 			n--;
 		}
 	}
-	return;
+	printf("\n");
 }
