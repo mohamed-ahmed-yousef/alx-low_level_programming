@@ -15,10 +15,6 @@ int main(void)
         b = -9808;
         c = 0;
 
-		if (a < 0) a = -a;
-		if (b < 0) b = -b;
-		if (c < 0) c = -c;
-
         largest = largest_number(a, b, c);
 
         printf("%d is the largest number\n", largest);
