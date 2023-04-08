@@ -1,6 +1,7 @@
 #include "main.h"
 /**
-* more_numbers -  print number from 0 - 14 using only _putchar and print it 10 time.
+* more_numbers -  print number from 0 -
+* 14 using only _putchar and print it 10 time.
 *
 * This function used to print 0-14 ten times
 * Return: Always return 0 or 1
