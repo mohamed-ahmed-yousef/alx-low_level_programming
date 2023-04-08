@@ -1,19 +1,23 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * print_line - Print line dependent on the integer n.
- * @n : The number of '_' characters to use
- * Return: Void.
- */
+* print_line -  print _ number of times.
+*
+* This function used to print 0-14 ten times
+*@n: number of printing _
+*/
 void print_line(int n)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < n; i++)
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-		_putchar('_');
+		for (i = 0; i < n; i++)
+		{
+			_putchar(95);
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
-}
 
+}
