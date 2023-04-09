@@ -1,17 +1,25 @@
 #include "main.h"
 /**
-* print_diagonal -  print space  number of times.
+*print_square -  print _ number of times.
 *
 * This function used to print 0-14 ten times
-*@n: number of printing \
+*@n: number of printing _
 */
-void print_square(int size)
+void print_square(int n)
 {
 	int i = 0, j = 0;
-	
-	for(i = 0; i < n; i++)
+
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-		printf("fasdkj");
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n; j++)
+				_putchar(35);
+		_putchar('\n');
+		}
+
 	}
 
 }
