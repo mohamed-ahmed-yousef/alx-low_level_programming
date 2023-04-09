@@ -10,16 +10,21 @@ void print_triangle(int n)
 {
 	int i = 0, j = 0;
 
-	for (i = 0; i < n; i++)
-	{
-		for (j = 0; j < n ; j++)
-		{
-			if (i + j + 1 >= n)
-				_putchar(35);
-			else
-				_putchar(' ');
-		}
+	if (n <= 0)
 		_putchar('\n');
+	else
+	{
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n ; j++)
+			{
+				if (i + j + 1 >= n)
+					_putchar(35);
+				else
+					_putchar(' ');
+			}
+			_putchar('\n');
 
+		}
 	}
 }
