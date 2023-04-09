@@ -1,5 +1,5 @@
 #!/bin/bash
 git add *
-git commit -m "Add fizz Buzz  Function "
+git commit -m "Add print_triangle Function "
 git push
 clear

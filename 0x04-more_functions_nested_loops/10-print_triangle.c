@@ -1,31 +1,26 @@
+#include <stdio.h>
 #include "main.h"
-
 /**
- * print_triangle - prints a triangle, followed by a new line
- * @size: size of the triangle
- */
-void print_triangle(int size)
+*print_triangle -  print _ number of times.
+*
+* This function used to print 0-14 ten times
+*@n: size of triangle
+*/
+void print_triangle(int n)
 {
-	if (size <= 0)
-	{
-		_putchar('\n');
-	} else
-	{
-		int i, j;
+	int i = 0, j = 0;
 
-		for (i = 1; i <= size; i++)
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < n ; j++)
 		{
-			for (j = i; j < size; j++)
-			{
+			if (i + j + 1 >= n)
+				_putchar(35);
+			else
 				_putchar(' ');
-			}
-
-			for (j = 1; j <= i; j++)
-			{
-				_putchar('#');
-			}
-
-			_putchar('\n');
 		}
+		_putchar('\n');
+
 	}
+	printf("\n");
 }
