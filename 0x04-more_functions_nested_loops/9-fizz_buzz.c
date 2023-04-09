@@ -1,40 +1,26 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
- * main - Fizz for multiples of 3 and Buzz for multiples of 5 FizzBuzz for both
- *
- *
- * Return: Always 0
- */
+*main -  print _ number of times.
+*
+* This function used to print 0-14 ten times
+* Return: always return 0
+*/
 int main(void)
 {
-	int x = 1;
+	int i = 1;
 
-	while (x < 101)
+	for (i = 1; i <= 100; i++)
 	{
-		if (x % 3 == 0 && x % 5 == 0)
-		{
-			printf("%s", "FizzBuzz");
-		}
-		else if (x % 3 == 0)
-		{
-			printf("%s", "Fizz");
-		}
-		else if (x % 5 == 0)
-		{
-			printf("%s", "Buzz");
-		}
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
 		else
-		{
-			printf("%d", x);
-		}
-
-		if (x != 100)
-		{
-		printf(" ");
-		}
-		x++;
+			printf("%d", i);
+		if (i != 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
