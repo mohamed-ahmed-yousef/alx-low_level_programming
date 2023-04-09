@@ -1,24 +1,26 @@
 #include "main.h"
 /**
-* print_diagonal -  print space  number of times.
+*print_diagonal -  print _ number of times.
 *
 * This function used to print 0-14 ten times
-*@n: number of printing \
+*@n: number of printing _
 */
 void print_diagonal(int n)
 {
-if (n <= 0)
-	_putchar('\n');
+	int i = 0, j = 0;
+
+	if (n <= 0)
+		_putchar('\n');
 	else
 	{
-		int i = 0, j = 0;
-
 		for (i = 0; i < n; i++)
 		{
 			for (j = 0; j < i; j++)
 				_putchar(' ');
-			_putchar('\\');
-			_putchar('\n');
+		_putchar('\\');
+		_putchar('\n');
 		}
+
 	}
+
 }
