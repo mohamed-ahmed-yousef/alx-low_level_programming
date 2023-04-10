@@ -1,24 +1,27 @@
 #include <stdio.h>
-
+#include <math.h>
 /**
- * main -  calculate largest prime of 612852475143
+ * main - print max prime factor.
  *
- * Return: Success Always
+ * This function used to print 0-14 ten times
+ * Return: always return 0
  */
-
-
 int main(void)
 {
-	long int x = 612852475143;
-	long int py;
+	long int  n = 612852475143;
+	long int i = 0;
+	long int max = 0;
 
-	for (py = 2; py < x; py++)
+	for (i = 2; i < sqrt(n) + 1; i++)
 	{
-		if (x % py == 0)
+		while (n % i == 0)
 		{
-			x = x / py;
+			max = i;
+			n = n / i;
 		}
 	}
-	printf("%ld\n", py);
+	if (n > 2)
+	max = n;
+	printf("%ld\n", max);
 	return (0);
 }
