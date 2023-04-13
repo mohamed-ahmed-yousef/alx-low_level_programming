@@ -1,5 +1,5 @@
 #!/bin/bash
 git add *
-git commit -m "Add print_numbers Function "
+git commit -m "print string "
 git push
 clear
