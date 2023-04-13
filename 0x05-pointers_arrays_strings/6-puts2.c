@@ -1,21 +1,18 @@
 #include "main.h"
-
+#include <string.h>
 /**
- * puts2 - prints every other character of a string.
- *@str: the string to use.
- */
-
+ * puts2 - print even char.
+ * @str: string to print char from it.
+*/
 void puts2(char *str)
 {
+	int n = strlen(str);
 	int i = 0;
 
-	while (str[i] != '\0')
+	for (i = 0; i < n; i++)
 	{
-		if (i % 2 == 0)
-		{
+		if (!(i % 2))
 			_putchar(str[i]);
-		}
-		i++;
 	}
 	_putchar('\n');
 }

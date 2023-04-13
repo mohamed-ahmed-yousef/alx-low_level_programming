@@ -1,5 +1,5 @@
 #!/bin/bash
 git add *
-git commit -m "print string reverse "
+git commit -m "reverse string"
 git push
 clear

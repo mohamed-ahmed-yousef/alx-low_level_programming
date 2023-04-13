@@ -1,12 +1,11 @@
-#include "main.h"
+#include <stdio.h>
 #include <string.h>
-/**
- * rev_string - reverse string.
- * @s: the string to print.
-*/
-void rev_string(char *s)
+
+
+int main()
 {
-	int i = 0;
+    char s[]="my School";
+    int i = 0;
 	int n = strlen(s);
 	int x = n / 2;
 
@@ -17,4 +16,5 @@ void rev_string(char *s)
 		s[i] = s[n - i - 1];
 		s[n - i - 1] = c;
 	}
+    printf("%s",s);
 }
