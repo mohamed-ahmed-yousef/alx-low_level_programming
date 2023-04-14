@@ -11,20 +11,19 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (i - 1 >= 0)
+		if (i == 0 || i -1 >= 0 && (
+			str[i - 1] == ' ' || str[i - 1] == '?' || str[i - 1] == '"' ||
+			str[i - 1] == ';' || str[i - 1] == '.' || str[i - 1] == '!' ||
+			str[i - 1] == ')' || str[i - 1] == ')' || str[i - 1] == '{' ||
+			str[i - 1] == ',' || str[i - 1] == '}' || str[i - 1] == '\n' ||
+			str[i - 1] == '\t'))
 		{
-			if (str[i - 1] == ' ' || str[i - 1] == '?' || str[i - 1] == '"' ||
-				str[i - 1] == ';' || str[i - 1] == '.' || str[i - 1] == '!' ||
-				str[i - 1] == ')' || str[i - 1] == ')' || str[i - 1] == '{' ||
-				str[i - 1] == ',' || str[i - 1] == '}' || str[i - 1] == '\n' ||
-				str[i - 1] == '\t')
-			{
-				int store = ((int)str[i] - 32);
+			int store = ((int)str[i] - 32);
 
-				if ((int)str[i] >= 97 && (int)str[i] <= 123)
-					str[i] = (char)store;
-			}
+			if ((int)str[i] >= 97 && (int)str[i] <= 123)
+				str[i] = (char)store;
 		}
+		
 		i++;
 	}
 	return (str);
