@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * base10 - power in 10 base
+ * print_number - power in 10 base
  * @n: an exponent
- * Return: returns 10 to power exponent
  */
 void print_number(int n)
 {
 	if (n < 0)
 	{
-		n=-n;
+		n = -n;
 		_putchar('-');
 	}
 	if (n / 10 > 0)
@@ -17,5 +16,4 @@ void print_number(int n)
 		print_number(n / 10);
 	}
 	_putchar(n % 10 + '0');
-
 }
