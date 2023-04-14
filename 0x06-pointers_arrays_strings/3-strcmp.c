@@ -9,9 +9,9 @@ int _strcmp(char *s1, char *s2)
 	int loop = 0;
 	int i = 0;
 
-	while (s1[len1] != '0')
+	while (s1[len1] != '\0')
 	len1++;
-	while (s2[len2] != '0')
+	while (s2[len2] != '\0')
 	len2++;
 
 	if (len1 > len2)
