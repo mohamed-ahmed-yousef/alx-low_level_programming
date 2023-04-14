@@ -12,7 +12,6 @@
 int main(void)
 {
 	int i;
-	int x = 1;
 
 	srand(time(NULL));
 
