@@ -15,9 +15,9 @@ int _atoi(char *s)
 	int sign = 0;
 	int n = 0;
 	int i = 0;
-	int digit = 0;
+	long int digit = 0;
 	int store = 0;
-	int toBreak=0;
+	int toBreak = 0;
 
 	while (s[n] != '\0')
 	n++;
@@ -31,12 +31,11 @@ int _atoi(char *s)
 			toBreak = 1;
 
 		}
-		else if (toBreak == 1 && digit > 0){
+		else if (toBreak == 1 && digit > 0)
 			break;
-		}
 		else if (s[i] == '-' || s[i] == '+' || s[i] == ' ')
 		{
-			if (s[i] == '-' )
+			if (s[i] == '-')
 			sign++;
 		}
 	}
