@@ -29,4 +29,5 @@ int main(void)
 		putchar(current + '0');
 	}
 	putchar('\n');
+	return (0);
 }
