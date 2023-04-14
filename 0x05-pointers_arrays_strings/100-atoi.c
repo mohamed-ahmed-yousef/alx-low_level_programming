@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <limits.h>
 
 /**
  * _atoi - convert a string into an integer.
@@ -41,5 +41,8 @@ int _atoi(char *s)
 	}
 	if (sign % 2 != 0)
 	digit = -digit;
+
+	if (digit  == INT_MIN)
+	return (0);
 	return (digit);
 }
