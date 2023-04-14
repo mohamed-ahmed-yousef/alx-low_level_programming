@@ -29,11 +29,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (total < 9)
 		overflow=1;
 		r[k++]=total % 10;
+		j--;
+		i--;
 		if (k >= size_r && (overflow == 1 || j > 0 || i > 0))
 		{
 			printf("%d %d", k,size_r);
 		return (0);
 		}
+		
 	}
 	return (r);
 }
