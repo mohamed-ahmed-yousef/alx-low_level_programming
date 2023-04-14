@@ -11,29 +11,23 @@
 
 int main(void)
 {
-	int ascii = 2772, i = 0, j, random;
-	char password[100];
-	time_t t;
+	int i;
+	int x = 1;
 
-	srand((int) time(&t));
-	while (ascii > 126)
-	{
-		random = rand() % 126;
-		password[i] = random;
-		ascii -= random;
-		i++;
-	}
-	if (ascii > 0)
-		password[i] = ascii;
-	else
-	{
-		i--;
-	}
-	
+	srand(time(NULL));
 
-	for (j = 0; j <= i; j++)
+	for (i = 0; i < 20; i++)
 	{
-		printf("%c", password[j]);
+		int current = rand() % 50;
+
+		if (current >= 15 && current < 41)
+		putchar(current + 50);
+		else if (current >= 41)
+		putchar(current + 56);
+		else if (current < 15)
+		putchar(current + 32 && current > 5);
+		else if (current <= 5)
+		putchar(current + '0');
 	}
-	return (0);
+	putchar('\n');
 }
