@@ -1,35 +1,31 @@
+#include "main.h"
+#include <stdio.h>
 /**
- * cap_string - capitalizes all words of a string.
- * @s: string.
- * Return: string.
- */
-char *cap_string(char *s)
+ * cap_string - captalize the string
+ * @str: string to captialzie
+ * Return: always return capatialze string.
+*/
+char *cap_string(char *str)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if ((s[i - 1] == ' ' || s[i - 1] == '\n'
-		|| s[i - 1] == '\t' || s[i - 1] == ','
-		|| s[i - 1] == ';' || s[i - 1] == '!'
-		|| s[i - 1] == '?' || s[i - 1] == '"'
-		|| s[i - 1] == '(' || s[i - 1] == ')'
-		|| s[i - 1] == '{' || s[i - 1] == '}'
-		|| s[i - 1] == '.')
-		&& (s[i] >= 'a' && s[i] <= 'z'))
+		if (i - 1 >= 0)
 		{
-			s[i] = s[i] - 32;
-		}
-		else if ((s[0] >= 97 && s[0] <= 122))
-		{
-			s[0] = s[0] - 32;
-		}
-		else
-		{
-			s[i] = s[i];
+			if (str[i - 1] == ' ' || str[i - 1] == '?' || str[i - 1] == '"' ||
+				str[i - 1] == ';' || str[i - 1] == '.' || str[i - 1] == '!' ||
+				str[i - 1] == ')' || str[i - 1] == ')' || str[i - 1] == '{' ||
+				str[i - 1] == ',' || str[i - 1] == '}' || str[i - 1] == '\n' ||
+				str[i - 1] == '\t')
+			{
+				int store = ((int)str[i] - 32);
+
+				if ((int)str[i] >= 97 && (int)str[i] <= 123)
+					str[i] = (char)store;
+			}
 		}
 		i++;
 	}
-	return (s);
+	return (str);
 }
