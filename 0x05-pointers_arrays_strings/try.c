@@ -1,20 +1,32 @@
 #include <stdio.h>
 #include <string.h>
-
-
-int main()
+#include <stdlib.h>
+#include "main.h"
+int main(void)
 {
-    char s[]="my School";
+    char s[] = "---++++ -++ Sui - te -   402 #cisfun :)";
+    int count = 0;
+    int n = strlen(s);
     int i = 0;
-	int n = strlen(s);
-	int x = n / 2;
-
-	for (i = 0; i < x; i++)
-	{
-		char c = s[i];
-
-		s[i] = s[n - i - 1];
-		s[n - i - 1] = c;
-	}
-    printf("%s",s);
+    int digit = 0;
+    int store = 0;
+    
+    for (i = 0 ; i < n; i++)
+    {
+        if (s[i] == '-')
+        {
+            count++;
+        }
+    }
+    for (i = 0 ; i < n; i++)
+    {
+        if ( s[i] >= '0' && s[i] <= '9')
+        {
+            store = s[i]-'0';
+            digit = store+10*digit;
+        }
+    }
+    if (count % 2 != 0)
+    digit = -digit;
+    printf("%d\n", digit);
 }
