@@ -2,28 +2,17 @@
 #include <string.h>
 int main(void)
 {
-    char s[]="EBG13";
-    char s1[]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char s2[]="NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int i = 0;
-	int j = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
+    
+    if (n < 0)
 	{
-		for (j = 0; s1[j] != '\0'; j++)
-		{
-			if (s[i] == s1[j])
-            {
-			    s[i] = s2[j];
-                break;
-
-            }
-		}
-        printf("%s", s);
+		n=-n;
+		_putchar('-');
 	}
-
-
-    printf("%s", s);
+	while (n / 10 > 0)
+	{
+		n = n / 10;
+	}
+	_putchar(n % 10 + '0');
 
 
 }
