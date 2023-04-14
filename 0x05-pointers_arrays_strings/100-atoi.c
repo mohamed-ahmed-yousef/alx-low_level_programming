@@ -15,7 +15,7 @@ int _atoi(char *s)
 	int sign = 0;
 	int n = 0;
 	int i = 0;
-	long int digit = 0;
+	int digit = 0;
 	int store = 0;
 	int toBreak = 0;
 
