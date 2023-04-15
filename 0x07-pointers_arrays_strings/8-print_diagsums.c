@@ -7,5 +7,5 @@ void print_diagsums(int *a, int size)
 {
     int len = sizeof(a);
 
-    printf("%d", len);
+    printf("%d\n", len);
 }
