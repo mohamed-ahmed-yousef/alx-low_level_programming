@@ -4,6 +4,7 @@
  * @dest: frist memeory area.
  * @src: second memeory area.
  * @n: n of time to copy.
+ * Return: return dest after modified.
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
