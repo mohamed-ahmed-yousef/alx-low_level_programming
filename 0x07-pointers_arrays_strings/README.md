@@ -1,0 +1,1 @@
+- Dealing with 2-d array & pointer to pointer in c.
