@@ -73,7 +73,6 @@ void second(int number, char *string, int flag)
 		if (toloop % 2 == 1)
 		printf(" ");
 	}
-	printf(" ");
 	toloop -= x;
 
 	for (i = number; i < toloop; i++)
