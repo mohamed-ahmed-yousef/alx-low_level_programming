@@ -17,5 +17,5 @@ cur = *s++;
 if (cur == c)
 return (s - 1);
 }
-return (0);
+return (NULL);
 }
