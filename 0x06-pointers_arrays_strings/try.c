@@ -2,17 +2,11 @@
 #include <string.h>
 int main(void)
 {
-    
-    if (n < 0)
-	{
-		n=-n;
-		_putchar('-');
-	}
-	while (n / 10 > 0)
-	{
-		n = n / 10;
-	}
-	_putchar(n % 10 + '0');
+
+    char c='A';
+    char hex[3];
+    sprintf(hex, "%02X", 30);
+    printf("%s", hex);
 
 
 }
