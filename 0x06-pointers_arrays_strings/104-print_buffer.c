@@ -11,7 +11,6 @@ void second(int number, char *string, int flag);
  */
 void print_buffer(char *b, int size)
 {
-	int i = 0;
 	int line = 0;
 	int flag = 0;
 
@@ -36,8 +35,6 @@ void print_buffer(char *b, int size)
 */
 void start(int number)
 {
-	char hex[6];
-	int n, i;
 
 	/*number *= 10;*/
 	printf("%08X", number);
