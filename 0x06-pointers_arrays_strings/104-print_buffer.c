@@ -37,7 +37,7 @@ void start(int number)
 {
 
 	/*number *= 10;*/
-	printf("%08X", number);
+	printf("%08x", number);
 }
 /**
  * second - print the second & thrid part of code.
@@ -60,7 +60,7 @@ void second(int number, char *string, int flag)
 	{
 		char hex[3];
 
-		sprintf(hex, "%02X", string[i]);
+		sprintf(hex, "%02x", string[i]);
 		printf("%s", hex);
 		if (i != number && i % 2 == 1)
 		printf(" ");
