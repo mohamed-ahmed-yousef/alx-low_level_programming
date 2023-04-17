@@ -22,5 +22,5 @@ if (curr * curr > n)
 return (-1);
 if (n == curr * curr)
 return (curr);
-_sqrt(n, curr + 1);
+return (_sqrt(n, curr + 1));
 }
