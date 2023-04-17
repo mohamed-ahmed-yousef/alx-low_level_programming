@@ -7,7 +7,7 @@ int help(int n, int i);
 */
 int is_prime_number(int n)
 {
-    return help(n,2);
+return (help(n, 2));
 }
 /**
  * help - check is prime or not
@@ -17,13 +17,13 @@ int is_prime_number(int n)
 */
 int help(int n, int i)
 {
-    if (n < 2)
-    return 0;
-    if (n == 2)
-    return 1;
-    if (n % i == 0)
-    return 0;
-    if (i * i > n)
-    return 1;
-    return help(n, i + 1);
+if (n < 2)
+return (0);
+if (n == 2)
+return (1);
+if (n % i == 0)
+return (0);
+if (i * i > n)
+return (1);
+return (help(n, i + 1));
 }
