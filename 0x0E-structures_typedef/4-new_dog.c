@@ -9,6 +9,7 @@ char *_strcpy(char *dest, char *src);
  * @name: one
  * @age: two
  * @owner: three
+ * Return: return the value
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -50,9 +51,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 }
 
 /**
- * _strlen - Returns 
- * @s: String 
- * Return: String 
+ * _strlen - Returns
+ * @s: String
+ * Return: String
  */
 int _strlen(char *s)
 {
@@ -69,7 +70,7 @@ int _strlen(char *s)
 /**
  * _strcpy - Copy a string
  * @dest: Destination
- * @src: Source 
+ * @src: Source
  * Return: pointer
  */
 char *_strcpy(char *dest, char *src)
