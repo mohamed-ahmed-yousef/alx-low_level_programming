@@ -1,5 +1,5 @@
 #!/bin/bash
 gcc -c -Wall -Werror -Wextra *.c 
-ar -rc libname.a *.o
-ranlib libname.a
+ar -rc libmy.a *.o
+ranlib libmy.a
 # gcc main.c -L. -lname -o main
