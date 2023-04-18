@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * init_dog - Initializes 
+ * init_dog - Initializes
  * @d: A dog .
  * @name: name .
  * @age: age .
