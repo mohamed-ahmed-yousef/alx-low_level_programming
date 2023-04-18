@@ -15,7 +15,9 @@ else
 {
 int num1 = atoi(argv[1]);
 int num2 = atoi(argv[2]);
-printf("%d\n", num1 * num2);
+long int a = num1;
+long int b = num2;
+printf("%ld\n", a * b);
 }
 return (0);
 }
