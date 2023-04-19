@@ -17,6 +17,7 @@ int **arr;
 arr = (int **)malloc(height * sizeof(int *));
 int i = 0;
 
+
 if (arr == NULL)
 return (NULL);
 
