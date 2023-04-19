@@ -37,7 +37,7 @@ void print_grid(int **grid, int width, int height)
 int main(void)
 {
     int **grid;
-    int w = 0, h = 0;
+    int w = 20, h = 20;
 
     grid = alloc_grid(w, h);
     if (grid == NULL)
@@ -46,8 +46,8 @@ int main(void)
     }
     print_grid(grid, w, h);
     printf("\n");
-    grid[0][3] = 98;
-    grid[3][4] = 402;
+    // grid[0][0] = 98;
+    // grid[1][0] = 402;
     print_grid(grid, w, h);
     /*free_grid(grid, 4);*/
     return (0);
