@@ -14,8 +14,9 @@ if (height == 0 || width == 0)
 return (NULL);
 
 int **arr;
-arr = (int **)malloc(height * sizeof(int *));
 int i = 0;
+
+arr = (int **)malloc(height * sizeof(int *));
 
 
 if (arr == NULL)
