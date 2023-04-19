@@ -10,12 +10,15 @@
 char *_strdup(char *str)
 {
 int len = 1, i = 0;
+char *new_str;
 
-while (str[len] != '\0')
+while (str && str[len] != '\0')
 len++;
-char *new_str = malloc(len *sizeof(*str));
+new_str = malloc(len *sizeof(*str));
+if (new_str == NULL)
+return (NULL);
 
-while (str[i] != '\0')
+while (str && str[i] != '\0')
 {
 new_str[i] = str[i];
 i++;
