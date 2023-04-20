@@ -22,7 +22,7 @@ unsigned int i = 0;
 
 char *ptr1;
 
-if (new_size == 0)
+if (new_size == 0 && ptr)
 {
 free(ptr);
 return (NULL);
