@@ -27,7 +27,7 @@ int main(void)
 {
     char **tab;
 
-    tab = strtow(NULL);
+    tab = strtow("Talk is cheap. Show me the da adfa adaf adfaf afdaf ");
     if (tab == NULL)
     {
         printf("Failed\n");

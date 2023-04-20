@@ -13,11 +13,18 @@ char **store(char **matrix, int *volume, char *str);
 */
 char **strtow(char *str)
 {
-int w = count_word(str);
+int w;
 char **matrix;
 int *volume;
-int *arr = (int *)malloc(w * sizeof(int));
+int *arr;
 int size, i;
+
+if (str == NULL)
+return (NULL);
+
+w = count_word(str);
+arr = (int *) malloc(w *sizeof(int));
+
 if (w == 0)
 return (NULL);
 
@@ -29,6 +36,7 @@ matrix[i] = (char *) malloc((volume[i] + 1) * sizeof(int));
 
 matrix = store(matrix, volume, str);
 
+matrix[size] = NULL;
 return (matrix);
 }
 /**
