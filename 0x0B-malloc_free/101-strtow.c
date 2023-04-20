@@ -16,11 +16,11 @@ char **strtow(char *str)
 int w = count_word(str);
 char **matrix;
 int *volume;
-int arr[w];
+int *arr = (int *)malloc(w * sizeof(int));
 int size, i;
 
 volume = volume_Word(str,  w, arr);
-size = sizeof(volume) / sizeof(volume[0]);
+size = w;
 matrix = (char **) malloc(size *sizeof(int *));
 for (i = 0; i < size; i++)
 matrix[i] = (char *) malloc((volume[i] + 1) * sizeof(int));
@@ -60,6 +60,7 @@ return (w);
 int *volume_Word(char *str, int w,  int *arr)
 {
 int i = 0, start = 0, c = 0, j = 0;
+(void)w;
 
 for (i = 0; str[i] != '\0'; i++)
 {
@@ -89,7 +90,7 @@ return (arr);
 char **store(char **matrix, int *volume, char *str)
 {
 char *temp;
-int i = 0, start = 0, end = 0, c = 0, j = 0, t = 0, m = 0;
+int i = 0, c = 0, j = 0, t = 0, m = 0;
 
 for (i = 0; str[i] != '\0'; i++)
 {
