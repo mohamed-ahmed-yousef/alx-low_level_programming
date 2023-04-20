@@ -43,9 +43,8 @@ int main(void)
 	unsigned int i;
 	unsigned int new_size;
 
-	new_size = 120;
-	p = malloc(sizeof(char) * 30);
-	p = _realloc(p, sizeof(char) * 30, sizeof(char) * new_size);
+	new_size = 0;
+	p = _realloc(NULL, sizeof(char) * 30, sizeof(char) * new_size);
 	if (p == NULL)
 	{
 		printf("Failed\n");

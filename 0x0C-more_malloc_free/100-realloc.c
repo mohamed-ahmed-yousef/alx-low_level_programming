@@ -31,14 +31,19 @@ return (NULL);
 if (new_size == old_size)
 return (ptr);
 
+if (!ptr)
+return (malloc(new_size));
+
 arr = malloc(new_size);
+
 if (arr == NULL)
 return (NULL);
+
 ptr1 = ptr;
 
 for (i = 0; i < new_size; i++)
 {
-if (i > old_size)
+if (i >= old_size)
 {
 free(ptr);
 return (arr);
