@@ -1,88 +1,45 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "dog.h"
-
-int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
-
+#include <string.h>
 /**
- * new_dog - function
- * @name: one
- * @age: two
- * @owner: three
- * Return: return the value
- */
+ * new_dog - function that creates a new dog.
+ * -------------
+ * @name: dog name
+ * @age: dog age.
+ * @owner: dog owner.
+ * --------------
+ * Return: NULL if the function fails
+*/
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *cutie_dog;
-	int name_l = 0, own_l = 0;
+dog_t *cute_dog;
+int len_name = strlen(name);
+int len_owner = strlen(owner);
 
-	if (name != NULL && owner != NULL)
-	{
-		name_l = _strlen(name) + 1;
-		own_l = _strlen(owner) + 1;
-		cutie_dog = malloc(sizeof(dog_t));
+if (name != NULL && owner != NULL)
+{
+cute_dog = malloc(sizeof(dog_t));
 
-		if (cutie_dog == NULL)
-			return (NULL);
+cute_dog->name = malloc(len_name * sizeof(char));
+cute_dog->owner = malloc(len_owner * sizeof(char));
 
-		cutie_dog->name = malloc(sizeof(char) * name_l);
-
-		if (cutie_dog->name == NULL)
-		{
-			free(cutie_dog);
-			return (NULL);
-		}
-
-		cutie_dog->owner = malloc(sizeof(char) * own_l);
-
-		if (cutie_dog->owner == NULL)
-		{
-			free(cutie_dog->name);
-			free(cutie_dog);
-			return (NULL);
-		}
-
-		cutie_dog->name = _strcpy(cutie_dog->name, name);
-		cutie_dog->owner = _strcpy(cutie_dog->owner, owner);
-		cutie_dog->age = age;
-	}
-
-	return (cutie_dog);
+if (cute_dog->name == NULL)
+{
+free(cute_dog);
+return (NULL);
 }
 
-/**
- * _strlen - Returns
- * @s: String
- * Return: String
- */
-int _strlen(char *s)
+if (cute_dog->owner == NULL)
 {
-	int c = 0;
-
-	for (; *s != '\0'; s++)
-	{
-		c++;
-	}
-
-	return (c);
+free(cute_dog->name);
+free(cute_dog);
+return (NULL);
 }
 
-/**
- * _strcpy - Copy a string
- * @dest: Destination
- * @src: Source
- * Return: pointer
- */
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[i] = src[i];
-	}
-
-	dest[i++] = '\0';
-
-	return (dest);
+cute_dog->name = strcpy(cute_dog->name, name);
+cute_dog->owner = strcpy(cute_dog->name, owner);
+cute_dog->age = age;
+}
+return (cute_dog);
 }
