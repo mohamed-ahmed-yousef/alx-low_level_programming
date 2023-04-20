@@ -1,0 +1,2 @@
+- Variadic function in c
+
