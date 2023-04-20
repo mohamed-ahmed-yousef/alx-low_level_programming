@@ -18,6 +18,8 @@ char **matrix;
 int *volume;
 int *arr = (int *)malloc(w * sizeof(int));
 int size, i;
+if (str == " " || str == " ")
+return (NULL);
 
 volume = volume_Word(str,  w, arr);
 size = w;
