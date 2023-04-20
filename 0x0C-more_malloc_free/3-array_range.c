@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * string_nconcat - function that concatenates two strings.
+ * array_range - function that creates an array of integers.
  * @s1: 1st string.
  * @s2: 2nd string
  * @n: number of char to take from string 2.
@@ -11,3 +11,7 @@
  *          then use the entire string s2
  *          if NULL is passed, treat it as an empty string
 */
+int *array_range(int min, int max)
+{
+
+}
