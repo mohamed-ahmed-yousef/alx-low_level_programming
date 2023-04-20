@@ -113,7 +113,7 @@ j++;
 c = 1;
 }
 
-if (c == 1 && (str[i] == ' ' || str[i + 1] == '\0'))
+if (c == 1 && (str[i] == ' '))
 {
 temp[t] = '\0';
 matrix[m] = temp;
@@ -125,6 +125,14 @@ if (c)
 {
 temp[t] = str[i];
 t++;
+if (str[i + 1] == '\0')
+{
+temp[t] = '\0';
+matrix[m] = temp;
+m++;
+t = 0;
+c = 0;
+}
 }
 }
 return (matrix);
