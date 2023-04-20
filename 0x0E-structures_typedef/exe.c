@@ -1,18 +1,19 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "dog.h"
 
 /**
- * main - check the code
+ * main - check the code .
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    dog_t my_dog;
+	struct dog my_dog;
 
-    my_dog.name = "Poppy";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    return (0);
+	my_dog.name = NULL;
+	my_dog.age = .0f;
+	my_dog.owner = NULL;
+	print_dog(&my_dog);
+	return (0);
 }
