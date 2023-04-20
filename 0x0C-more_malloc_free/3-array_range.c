@@ -2,16 +2,31 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * array_range - function that creates an array of integers.
- * @s1: 1st string.
- * @s2: 2nd string
- * @n: number of char to take from string 2.
- * Return: If the function fails, it should return NULL
- *          If n is greater or equal to the length of s2
- *          then use the entire string s2
- *          if NULL is passed, treat it as an empty string
+ * array_range - creates an array of integers.
+ * array contain all the values from min (included) to max (included),
+ * ordered from min to ma
+ * --------
+ * @min: min integer.
+ * @max: max integer.
+ * -----------
+ * Return:  If min > max, return NULL
+ *          If malloc fails, return NULL
 */
 int *array_range(int min, int max)
 {
+int *arr, i = 0;
 
+if (min > max)
+return (NULL);
+
+arr = malloc((max - min + 1) * sizeof(int));
+
+if (arr == NULL)
+return (NULL);
+
+for (i = min; i <= max; i++)
+{
+arr[i] = i;
+}
+return (arr);
 }
