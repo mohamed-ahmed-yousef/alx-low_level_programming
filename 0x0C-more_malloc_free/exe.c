@@ -1,8 +1,7 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-int *array_range(int, int);
 
 /**
  * simple_print_buffer - prints buffer in hexa
@@ -11,43 +10,45 @@ int *array_range(int, int);
  *
  * Return: Nothing.
  */
-void simple_print_buffer(int *buffer, unsigned int size)
+void simple_print_buffer(char *buffer, unsigned int size)
 {
-	unsigned int i;
+    unsigned int i;
 
-	i = 0;
-	while (i < size)
-	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0x%02x", buffer[i]);
-		i++;
-	}
-	printf("\n");
+    i = 0;
+    while (i < size)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
 }
 
 /**
- * main - check the code .
+ * main - check the code for
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int *a;
+    char *p;
+    int i;
 
-	a = array_range(1024, 2048);
-	if (a == NULL)
-	{
-		printf("Failed\n");
-		return (1);
-	}
-	simple_print_buffer(a, 1024);
-	free(a);
-	return (0);
+    p = malloc(sizeof(char) * 10);
+    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+    i = 0;
+    while (i < 98)
+    {
+        p[i++] = 98;
+    }
+    simple_print_buffer(p, 98);
+    free(p);
+    return (0);
 }
