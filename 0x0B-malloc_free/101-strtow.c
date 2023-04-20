@@ -112,11 +112,7 @@ return (NULL);
 j++;
 c = 1;
 }
-if (c)
-{
-temp[t] = str[i];
-t++;
-}
+
 if (c == 1 && (str[i] == ' ' || str[i + 1] == '\0'))
 {
 temp[t] = '\0';
@@ -124,6 +120,11 @@ matrix[m] = temp;
 m++;
 t = 0;
 c = 0;
+}
+if (c)
+{
+temp[t] = str[i];
+t++;
 }
 }
 return (matrix);
