@@ -32,6 +32,8 @@ if (new_size == old_size)
 return (ptr);
 
 arr = malloc(new_size);
+if (arr == NULL)
+return (NULL);
 ptr1 = ptr;
 
 for (i = 0; i < new_size; i++)
