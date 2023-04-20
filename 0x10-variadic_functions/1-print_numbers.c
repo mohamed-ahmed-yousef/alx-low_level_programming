@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_numbers - prints 
+ * print_numbers - prints
  * @separator: string
  * @n: number of elements
  * Return: void
