@@ -1,5 +1,5 @@
 #!/bin/bash
 git add *
-git commit -m "Recursion In C"
+git commit -m "structures_typedef  in c"
 git push
 clear

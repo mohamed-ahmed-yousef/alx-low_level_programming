@@ -1,1 +1,1 @@
-# c structures and typedef
+- structures_typedef  in c
