@@ -1,5 +1,5 @@
 #!/bin/bash
 git add *
-git commit -m "Recursion In C"
+git commit -m "preprocessor in c"
 git push
 clear
