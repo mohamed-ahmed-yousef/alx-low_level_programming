@@ -29,20 +29,18 @@ cute_dog->name = malloc((len_name + 1)  * sizeof(char));
 
 if (cute_dog->name == NULL)
 {
-free(cute_dog);
+
 return (NULL);
 }
 
 cute_dog->owner = malloc((len_owner  + 1) * sizeof(char));
 if (cute_dog->owner == NULL)
 {
-free(cute_dog->name);
-free(cute_dog);
 return (NULL);
 }
 
-cute_dog->name = strcpy(cute_dog->name, name);
-cute_dog->owner = strcpy(cute_dog->name, owner);
+cute_dog->name = strdup(name);
+cute_dog->owner = strdup(owner);
 cute_dog->age = age;
 }
 return (cute_dog);
