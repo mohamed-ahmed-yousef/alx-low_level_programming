@@ -29,13 +29,15 @@ cute_dog->name = malloc((len_name + 1)  * sizeof(char));
 
 if (cute_dog->name == NULL)
 {
-
+free(cute_dog);
 return (NULL);
 }
 
 cute_dog->owner = malloc((len_owner  + 1) * sizeof(char));
 if (cute_dog->owner == NULL)
 {
+free(cute_dog->name);
+free(cute_dog);
 return (NULL);
 }
 
