@@ -35,10 +35,10 @@ break;
 
 case 's':
 str = va_arg(ptr, char *);
-if (str != NULL)
+if (str == NULL)
+str = "(nil)";
 printf("%s%s", sep, str);
-else
-printf("(nil)");
+
 break;
 
 default:
