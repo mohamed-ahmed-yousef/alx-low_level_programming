@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * print_numbers - function that prints numbers, followed by a new line.
@@ -19,7 +20,7 @@ va_start(ptr, n);
 for (i = 0; i < n; i++)
 {
 printf("%d", va_arg(ptr, int));
-if (i + 1 < n)
+if (i + 1 < n && separator != NULL)
 {
 printf("%s", separator);
 }
