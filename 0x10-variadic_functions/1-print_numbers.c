@@ -3,12 +3,28 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - function that prints numbers, followed by a new line.
- * @n: no.of elements
+ * print_numbers - function that prints numbers, followed by a new line.
+ * @separator: our seperator.
  * @...: all arguments pass.
+ * @n: no.of elements
  * Return: return the element.
 */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-    
+va_list ptr;
+int i = 0;
+
+va_start(ptr, n);
+
+for (i = 0; i < n; i++)
+{
+printf("%d", va_arg(ptr, int));
+if (i + 1 < n)
+{
+printf("%s", separator);
+}
+
+}
+printf("\n");
+va_end(ptr);
 }
