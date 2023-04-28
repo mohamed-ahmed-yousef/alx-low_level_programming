@@ -12,6 +12,9 @@ list_t *store = malloc(sizeof(list_t));
 list_t *linked_list;
 unsigned int len = 0;
 
+if (store == NULL)
+return (NULL);
+
 while (str[len])
 len++;
 
