@@ -1,4 +1,4 @@
 all:
 	git add *
-	git commit -m "Add docs to function in python"
+	git commit -m "Fix Error in python code"
 	git push

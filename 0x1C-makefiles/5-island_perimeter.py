@@ -5,18 +5,10 @@
 """
 def all(i, j, grid, n):
     tmp = 4
-    if i > 0:
-        if grid[i -1][j] == 1:
-            tmp -= 1
-    if j > 0:
-        if grid[i][j - 1] == 1:
-            tmp -= 1
-    if i > 0 and j > 0:
-        if grid[i -1][j -1] == 1:
-            tmp -= 1
-    if i + 1 < n and j + 1 < n:
-        if grid[i + 1][j + 1] == 1:
-            tmp -= 1
+    if i > 0 and grid[i -1][j] == 1:
+        tmp -= 2
+    if j > 0 and grid[i][j - 1] == 1:
+        tmp -= 2
     return tmp
 
 def island_perimeter(grid):
@@ -25,12 +17,11 @@ def island_perimeter(grid):
     """
 
     n = len(grid)
+    k = len(grid[0])
     ans = 0
     for i in range(n):
-        for j in range(n):
+        for j in range(k):
             if grid[i][j] == 1:
                 ans += all(i, j, grid, n)
-            if grid[j][i] == 1:
-                ans += all(j, i, grid, n)
-    print(ans)
-            
+
+    return ans
