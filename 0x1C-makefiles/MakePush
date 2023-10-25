@@ -1,0 +1,4 @@
+all:
+	git add *
+	git commit -m "Add Make Files"
+	git push
