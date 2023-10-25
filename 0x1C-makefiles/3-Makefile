@@ -2,17 +2,20 @@ CC = gcc
 SRC = main.c school.c
 OBJ = main.o school.o
 NAME = school
-RM = 
+RM = rm
 all:
 	$(CC) -c -o $(word 1, $(OBJ)) main.c
 	$(CC) -c -o $(word 2, $(OBJ)) school.c
 	$(CC) $(OBJ) -o $(NAME)
+
 clean:
-	rm $(NAME)
+	$(RM) -rf *~ $(NAME)
+
 oclean:
-	rm *.o
-fclean:
-	rm *.o $(NAME)
-re:all
-	./$(NAME)
+	$(RM) -rf *.o
+
+fclean: clean oclean
+
+re:fclean all
+
 

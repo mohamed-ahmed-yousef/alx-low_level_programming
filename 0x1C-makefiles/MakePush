@@ -1,4 +1,4 @@
 all:
 	git add *
-	git commit -m "Fix Betty Issues"
+	git commit -m "Fix make File 3"
 	git push
