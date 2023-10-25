@@ -1,4 +1,4 @@
 all:
 	git add *
-	git commit -m "Add Make Files"
+	git commit -m "Add docs to function in python"
 	git push

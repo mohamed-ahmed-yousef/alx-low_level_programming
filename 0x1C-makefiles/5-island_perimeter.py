@@ -4,6 +4,9 @@
     a function that returns the perimeter of the island described in grid:
 """
 def island_perimeter(grid):
+    """
+        Function to find the area of island
+    """
     m_c = 0
     m_r = 0
     n = len(grid)
