@@ -3,13 +3,18 @@
 """
     a function that returns the perimeter of the island described in grid:
 """
+
+
 def all(i, j, grid, n):
     tmp = 4
-    if i > 0 and grid[i -1][j] == 1:
+
+    if i > 0 and grid[i - 1][j] == 1:
         tmp -= 2
+
     if j > 0 and grid[i][j - 1] == 1:
         tmp -= 2
     return tmp
+
 
 def island_perimeter(grid):
     """

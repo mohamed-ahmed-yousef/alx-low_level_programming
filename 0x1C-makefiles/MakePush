@@ -1,4 +1,4 @@
 all:
 	git add *
-	git commit -m "Fix Error in python code"
+	git commit -m "Fix Betty Issues"
 	git push
