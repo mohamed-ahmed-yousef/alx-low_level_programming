@@ -3,22 +3,34 @@
 """
     a function that returns the perimeter of the island described in grid:
 """
+def all(i, j, grid, n):
+    tmp = 4
+    if i > 0:
+        if grid[i -1][j] == 1:
+            tmp -= 1
+    if j > 0:
+        if grid[i][j - 1] == 1:
+            tmp -= 1
+    if i > 0 and j > 0:
+        if grid[i -1][j -1] == 1:
+            tmp -= 1
+    if i + 1 < n and j + 1 < n:
+        if grid[i + 1][j + 1] == 1:
+            tmp -= 1
+    return tmp
+
 def island_perimeter(grid):
     """
         Function to find the area of island
     """
-    m_c = 0
-    m_r = 0
+
     n = len(grid)
+    ans = 0
     for i in range(n):
-        tmp_c = 0
-        tmp_r = 0
         for j in range(n):
             if grid[i][j] == 1:
-                tmp_c +=  1
+                ans += all(i, j, grid, n)
             if grid[j][i] == 1:
-                tmp_r += 1
-
-        m_c = max(tmp_c, m_c)
-        m_r = max(tmp_r, m_r)
-    return (2 * (m_c + m_r))
+                ans += all(j, i, grid, n)
+    print(ans)
+            
