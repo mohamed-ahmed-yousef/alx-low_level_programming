@@ -1,4 +1,4 @@
 all:
 	git add *
-	git commit -m "Fix make File 3"
+	git commit -m "Fix the 4th task file"
 	git push
