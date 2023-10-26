@@ -1,4 +1,4 @@
 all:
 	git add *
-	git commit -m "Fix the 5th task file"
+	git commit -m "Add Advanced Task"
 	git push
